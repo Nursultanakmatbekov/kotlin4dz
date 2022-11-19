@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recyclerFragment">
+
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="com.example.kotlin4dz.RecyclerFragment"
+        android:label="fragment_recycler"
+        tools:layout="@layout/fragment_recycler" >
+        <action
+            android:id="@+id/action_recyclerFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_recyclerFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.kotlin4dz.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.kotlin4dz.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
+    </fragment>
+</navigation>
